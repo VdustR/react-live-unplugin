@@ -20,16 +20,20 @@
   "version": "0.2",
   "words": [
     "antfu",
+    "clsx",
     "commitizen",
+    "defu",
     "jiti",
     "jsdoc",
+    "mkdist",
+    "noopener",
+    "noreferrer",
     "nums",
     "nvmrc",
     "pathe",
     "tsdoc",
+    "unplugin",
     "unrs",
-    "vite",
-    "vitejs",
     "vitest"
   ]
 }

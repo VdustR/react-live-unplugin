@@ -11,9 +11,16 @@ const prettierignorePath = path.resolve(__dirname, ".prettierignore");
 export default vdustr(
   {
     react: true,
-    storybook: true,
-    emotion: true,
-    tanstackQuery: true,
+  },
+  {
+    files: [
+      "packages/docs/sidebars.ts",
+      "packages/docs/src/pages/**/*.tsx",
+      "**/*.live.tsx",
+    ],
+    rules: {
+      "import/no-default-export": "off",
+    },
   },
   includeIgnoreFile(prettierignorePath),
 );

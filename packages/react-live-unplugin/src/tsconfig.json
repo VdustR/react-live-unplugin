@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "extends": ["@repo/tsconfig/script/tsconfig", "@docusaurus/tsconfig"]
+}

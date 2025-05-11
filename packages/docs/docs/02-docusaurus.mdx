@@ -1,0 +1,41 @@
+---
+description: Live for docusaurus
+---
+
+import DemoComponent from "@site/src/components/DemoComponent.live";
+
+# Docusaurus Live Plugin
+
+## Installation
+
+The docusaurus plugin is based on [@docusaurus/theme-live-codeblock](https://docusaurus.io/docs/api/themes/@docusaurus/theme-live-codeblock),
+to use this plugin , you need to install it first:
+
+```bash
+pnpm install @docusaurus/theme-live-codeblock
+```
+
+## Configuration
+
+The plugin integrates with Docusaurus by using the `react-live-unplugin` package. Ensure the following configuration is added to your `docusaurus.config.js`:
+
+```ts
+import type { Config } from "@docusaurus/types";
+
+const config: Config = {
+  themeConfig: {
+    liveCodeBlock: {
+      playgroundPosition: "bottom",
+    },
+  },
+  plugins: ["react-live-unplugin/docusaurus/plugin"],
+};
+
+export default config;
+```
+
+This configuration ensures that the live code block is rendered correctly.
+
+Demo:
+
+<DemoComponent />
