@@ -3,14 +3,23 @@
   "version": "0.0.0",
   "description": "React Live Unplugin",
   "keywords": [
-    "react",
-    "react-live",
-    "unplugin",
     "babel",
-    "typescript",
     "demo",
-    "docusaurus"
+    "typescript",
+    "webpack",
+    "jsx",
+    "ide",
+    "rollup",
+    "live",
+    "tsx",
+    "codeblocks",
+    "rolldown",
+    "react-live",
+    "docusaurus",
+    "vite",
+    "unplugin"
   ],
+  "homepage": "https://vdustr.dev/react-live-unplugin",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/VdustR/react-live-unplugin.git"
