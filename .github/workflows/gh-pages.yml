@@ -32,7 +32,8 @@ jobs:
         run: pnpm install
 
       # Build the library first
-      - run: pnpm run --filter react-live-unplugin build
+      - name: Build react-live-unplugin library
+        run: pnpm run --filter react-live-unplugin build
       - run: pnpm run --filter docs build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
