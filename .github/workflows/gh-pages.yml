@@ -30,6 +30,9 @@ jobs:
             ${{ runner.os }}-pnpm-store-
       - name: Install dependencies
         run: pnpm install
+
+      # Build the library first
+      - run: pnpm run --filter react-live-unplugin build
       - run: pnpm run --filter docs build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
