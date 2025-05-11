@@ -1,0 +1,54 @@
+---
+description: "Customize the react-live component"
+---
+
+# Custom React Live components
+
+You can customize the components by your own.
+
+For example, you can create a StyledReactLive component:
+
+```tsx
+// @/components/StyledReactLive.tsx
+
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import type { ReactLive } from "react-live-unplugin";
+
+const StyledReactLive: ReactLive.Type = (props) => {
+  return (
+    <LiveProvider {...props}>
+      <LiveEditor />
+      <LiveError />
+      <LivePreview />
+    </LiveProvider>
+  );
+};
+```
+
+You can refer to the following source files for inspiration:
+
+- [ReactLive.tsx](https://github.com/VdustR/react-live-unplugin/blob/main/packages/react-live-unplugin/src/default/ReactLive.tsx): The default React Live component.
+- [LiveCodeBlock.tsx](https://github.com/VdustR/react-live-unplugin/blob/main/packages/react-live-unplugin/src/docusaurus/LiveCodeBlock.tsx): The Docusaurus-specific implementation.
+
+These examples demonstrate how to structure and customize your components.
+
+Then you need you put the options to the component:
+
+```ts
+// vite.config.ts
+
+import { defineConfig } from "vite";
+import { reactLiveUnplugin } from "react-live-unplugin";
+
+export default defineConfig({
+  plugins: [
+    reactLiveUnplugin.vite({
+      id: /\.demo\.(t|j)sx?$/,
+      reactLiveModulePath: "@/components/StyledReactLive",
+      reactLiveExportName: "StyledReactLive",
+    }),
+  ],
+});
+```
+
+Then all `.demo.tsx` files will use the `StyledReactLive` component to render the live code block.

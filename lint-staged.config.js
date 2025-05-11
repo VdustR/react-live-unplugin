@@ -17,7 +17,9 @@ const pkgs = glob.sync("packages/*", {
  * Packages containing a `src` directory. Each package should have its own
  * tsconfig.json file located within the `src` directory.
  */
-const withSrcPkgs = pkgs.filter((pkg) => fs.existsSync(path.join(pkg, "src")));
+const withSrcPkgs = pkgs.filter((pkg) =>
+  fs.existsSync(path.join(pkg, "src/tsconfig")),
+);
 
 /**
  * @type {import('lint-staged').Configuration}

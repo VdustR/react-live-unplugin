@@ -1,0 +1,71 @@
+{
+  "name": "react-live-unplugin",
+  "version": "0.0.0",
+  "description": "React Live Unplugin",
+  "keywords": [
+    "react",
+    "react-live",
+    "unplugin",
+    "babel",
+    "typescript",
+    "demo",
+    "docusaurus"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VdustR/react-live-unplugin.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "VdustR",
+    "email": "vdustr@gmail.com",
+    "url": "https://vdustr.dev"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "require": "./dist/*.cjs",
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts",
+      "default": "./dist/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "prepublishOnly": "pnpm run build"
+  },
+  "dependencies": {
+    "@babel/parser": "catalog:",
+    "@babel/standalone": "catalog:",
+    "@babel/traverse": "catalog:",
+    "@docusaurus/types": "catalog:",
+    "@types/babel__core": "catalog:",
+    "@types/babel__standalone": "catalog:",
+    "@types/babel__traverse": "catalog:",
+    "defu": "catalog:",
+    "unplugin": "catalog:"
+  },
+  "devDependencies": {
+    "@docusaurus/theme-live-codeblock": "catalog:",
+    "unbuild": "catalog:"
+  },
+  "peerDependencies": {
+    "@docusaurus/theme-live-codeblock": "catalog:",
+    "@docusaurus/tsconfig": "catalog:",
+    "react": "catalog:",
+    "react-live": "catalog:"
+  }
+}
