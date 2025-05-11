@@ -1,0 +1,26 @@
+{
+  "name": "vite-react-19",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Vite + React 19 boilerplate",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@emotion/styled": "catalog:",
+    "@fontsource/inter": "catalog:",
+    "@mui/joy": "catalog:",
+    "@repo/css-reset": "workspace:*",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "vitest": "catalog:"
+  },
+  "devDependencies": {
+    "vite-tsconfig-paths": "catalog:"
+  }
+}
