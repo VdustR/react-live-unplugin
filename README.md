@@ -21,4 +21,4 @@ pnpm -r publish
 
 [MIT](./LICENSE)
 
-Copyright (c) 2025-preset ViPro <vdustr@gmail.com> (<http://vdustr.dev>)
+Copyright (c) 2025-present ViPro <vdustr@gmail.com> (<http://vdustr.dev>)
