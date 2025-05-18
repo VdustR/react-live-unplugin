@@ -1,8 +1,8 @@
 import type { StringFilter, UnpluginFactory } from "unplugin";
 import { parse } from "@babel/parser";
-import traverse from "@babel/traverse";
 import defu from "defu";
 import { createUnplugin } from "unplugin";
+import { interopDefault } from "./utils";
 
 const randomSeed = Math.random().toString(36).slice(2);
 
@@ -50,7 +50,7 @@ const reactLiveUnpluginFactory: UnpluginFactory<
         id: mergedOptions.id,
         exclude: mergedOptions.exclude,
       },
-      handler(code) {
+      async handler(code) {
         const ast = parse(code, {
           // parse in strict mode and allow module declarations
           sourceType: "module",
@@ -58,6 +58,10 @@ const reactLiveUnpluginFactory: UnpluginFactory<
         });
         const imports: Array<string> = [];
         const importsCode: Array<string> = [];
+
+        const traverse = await interopDefault(
+          interopDefault(import("@babel/traverse")),
+        );
 
         traverse(ast, {
           ImportDeclaration(path) {

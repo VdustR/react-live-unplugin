@@ -52,7 +52,7 @@
     "fast-glob": "catalog:",
     "husky": "catalog:",
     "jiti": "catalog:",
-    "lerna": "^8.2.2",
+    "lerna": "catalog:",
     "lint-staged": "catalog:",
     "pathe": "catalog:",
     "postcss-styled-syntax": "catalog:",

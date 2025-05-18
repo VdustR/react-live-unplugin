@@ -1,8 +1,7 @@
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import DemoComponent from "@site/src/components/DemoComponent.live";
 import Layout from "@theme/Layout";
-
+import img from "./image.png";
 import styles from "./index.module.css";
 
 export default function Home(): React.ReactNode {
@@ -16,13 +15,13 @@ export default function Home(): React.ReactNode {
         <article className={styles["hero-section"]}>
           <h1 className="hero__title">{siteConfig.title}</h1>
           <section>
-            <h2>Features</h2>
-            <ul>
-              <li>Live code editing and rendering</li>
-              <li>Seamless integration with React and TypeScript</li>
-              <li>Customizable and extensible</li>
-            </ul>
+            <p>Turn React components into live code blocks with ease.</p>
           </section>
+          <img
+            className={styles["exam-img"]}
+            src={img}
+            alt="React Live Unplugin"
+          />
           <section>
             <h2>Get Started</h2>
             <p>
@@ -31,10 +30,6 @@ export default function Home(): React.ReactNode {
             </p>
           </section>
         </article>
-        <section className={styles["demo-section"]}>
-          <h2>Live Code Demo</h2>
-          <DemoComponent />
-        </section>
       </main>
     </Layout>
   );

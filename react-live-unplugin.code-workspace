@@ -13,11 +13,19 @@
     { "path": "packages/docs" },
     { "path": "packages/dts" },
     { "path": "packages/tsconfig" },
+    { "path": "packages/demo-vite" },
   ],
   "settings": {
+    "[mdx]": {
+      "editor.codeActionsOnSave": [
+        "source.fixAll.eslint",
+        "source.fixAll.stylelint",
+        "source.formatDocument",
+      ],
+    },
     "css.validate": false,
     "editor.codeActionsOnSave": [
-      // "source.removeUnusedImports",
+      "source.removeUnusedImports",
       "source.fixAll.eslint",
       "source.fixAll.stylelint",
       "source.formatDocument",

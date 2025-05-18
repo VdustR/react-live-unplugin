@@ -4,13 +4,38 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 const config: Config = {
   title: "react-live-unplugin",
-  tagline: "Interactive React Live Code Blocks",
+  tagline: "Turn React components into live code blocks with ease",
   favicon: "img/favicon.ico",
   url: "https://vdustr.dev/",
   baseUrl: "/react-live-unplugin/",
   trailingSlash: true,
   organizationName: "VdustR",
   projectName: "react-live-unplugin",
+
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "anonymous",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap",
+        rel: "stylesheet",
+      },
+    },
+  ],
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -25,8 +50,6 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: false,
         theme: {
@@ -37,13 +60,15 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: "img/docusaurus-social-card.jpg",
+    colorMode: {
+      defaultMode: "dark",
+    },
+    image: "img/logo.png",
     navbar: {
       title: "react-live-unplugin",
       logo: {
         alt: "react-live-unplugin",
-        src: "img/logo.svg",
+        src: "img/logo.png",
       },
       items: [
         {
@@ -60,7 +85,6 @@ const config: Config = {
       ],
     },
     footer: {
-      style: "dark",
       links: [
         {
           title: "Docs",
@@ -89,11 +113,11 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="http://github.com/vdustr" target="_blank" rel="noopener noreferrer">VdustR</a>. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="http://github.com/vdustr" target="_blank" rel="noopener noreferrer">VdustR</a>. Released under the <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener noreferrer">MIT License</a>.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.nightOwlLight,
+      darkTheme: prismThemes.nightOwl,
     },
     liveCodeBlock: {
       playgroundPosition: "bottom",

@@ -13,7 +13,14 @@ namespace ReactLive {
   export type Type = React.FC<Props>;
 }
 
-const ReactLive: ReactLive.Type = ({ scope, code, ...props }) => {
+const classNameRecord = {
+  container: "react-live-unplugin",
+  editor: "react-live-unplugin__editor",
+  preview: "react-live-unplugin__preview",
+  error: "react-live-unplugin__error",
+} satisfies Record<string, string>;
+
+const ReactLiveInternal: ReactLive.Type = ({ scope, code, ...props }) => {
   const mergedScope = useMemo(
     () => ({
       ...React,
@@ -29,11 +36,24 @@ const ReactLive: ReactLive.Type = ({ scope, code, ...props }) => {
       code={code || ""}
       transformCode={transformCode}
     >
-      <LiveEditor />
-      <LiveError />
-      <LivePreview />
+      <div className={classNameRecord.container}>
+        <div className={classNameRecord.editor}>
+          <LiveEditor />
+        </div>
+        <div className={classNameRecord.error}>
+          <LiveError />
+        </div>
+        <div className={classNameRecord.preview}>
+          <LivePreview />
+        </div>
+      </div>
     </LiveProvider>
   );
 };
+
+const ReactLive = Object.assign(ReactLiveInternal, {
+  displayName: "ReactLive",
+  classNameRecord,
+});
 
 export { ReactLive };
