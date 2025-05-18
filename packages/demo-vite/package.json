@@ -1,6 +1,6 @@
 {
   "name": "demo-vite",
-  "version": "0.0.0-unused",
+  "version": "0.2.0",
   "private": true,
   "description": "Demo Vite for react-live-unplugin",
   "type": "module",
