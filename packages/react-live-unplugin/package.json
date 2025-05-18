@@ -1,7 +1,7 @@
 {
   "name": "react-live-unplugin",
   "version": "0.2.0",
-  "description": "React Live Unplugin",
+  "description": "Turn React components into live code blocks with ease.",
   "keywords": [
     "babel",
     "demo",

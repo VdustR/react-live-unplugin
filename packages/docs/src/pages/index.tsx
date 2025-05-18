@@ -7,10 +7,7 @@ import styles from "./index.module.css";
 export default function Home(): React.ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`Welcome to ${siteConfig.title}`}
-      description="Transform your React components into live code blocks with ease."
-    >
+    <Layout description={siteConfig.tagline}>
       <main className={styles["main-section"]}>
         <article className={styles["hero-section"]}>
           <h1 className="hero__title">{siteConfig.title}</h1>

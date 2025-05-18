@@ -1,5 +1,7 @@
 # react-live-unplugin
 
+Turn React components into live code blocks with ease.
+
 Please refer to the [official documentation](https://vdustr.dev/react-live-unplugin) for more details.
 
 ## Maintainance
