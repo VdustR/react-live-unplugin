@@ -34,6 +34,8 @@
     "tsdoc",
     "unplugin",
     "unrs",
+    "vite",
+    "vitejs",
     "vitest"
   ]
 }

@@ -1,23 +1,17 @@
-import { useMemo } from "react";
+import clsx from "clsx";
+import styles from "./StyledButton.module.css";
 
 namespace StyledButton {
   export interface Props extends React.ComponentProps<"button"> {}
 }
 
-const StyledButton: React.FC<StyledButton.Props> = ({
-  style,
-  type,
-  ...props
-}) => {
-  const mergedStyle: typeof style = useMemo(
-    () => ({
-      ...style,
-      textTransform: "uppercase",
-    }),
-    [style],
-  );
+const StyledButton: React.FC<StyledButton.Props> = ({ type, ...props }) => {
   return (
-    <button {...props} type={type} style={mergedStyle}>
+    <button
+      {...props}
+      type={type}
+      className={clsx(styles["styled-button"], props.className)}
+    >
       {props.children}
     </button>
   );

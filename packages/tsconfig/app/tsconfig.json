@@ -1,0 +1,4 @@
+{
+  "display": "Repo Script",
+  "extends": ["@vp-tw/tsconfig/base/vite-react/tsconfig"]
+}

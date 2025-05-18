@@ -24,7 +24,9 @@ export default defineConfig({
 });
 ```
 
-All unplugin supports are supported, see [unplugin](https://unplugin.unjs.io/guide/#overview)
+You can check out the example in [packages/demo-vite](https://github.com/VdustR/react-live-unplugin/tree/main/packages/demo-vite).
+
+All unplugin supports are supported, see [unplugin](https://unplugin.unjs.io/guide/#overview).
 
 ## Options
 
