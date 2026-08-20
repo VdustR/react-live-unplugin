@@ -6,7 +6,7 @@ const config: Config = {
   title: "react-live-unplugin",
   tagline: "Turn React components into live code blocks with ease",
   favicon: "img/favicon.ico",
-  url: "https://vdustr.dev/",
+  url: "https://vdustr.github.io/",
   baseUrl: "/react-live-unplugin/",
   trailingSlash: true,
   organizationName: "VdustR",

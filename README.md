@@ -2,7 +2,7 @@
 
 Turn React components into live code blocks with ease.
 
-Please refer to the [official documentation](https://vdustr.dev/react-live-unplugin) for more details.
+Please refer to the [official documentation](https://vdustr.github.io/react-live-unplugin) for more details.
 
 ## Maintainance
 
@@ -23,4 +23,4 @@ pnpm -r publish
 
 [MIT](./LICENSE)
 
-Copyright (c) 2025-present ViPro <vdustr@gmail.com> (<http://vdustr.dev>)
+Copyright (c) 2025-present ViPro <vdustr@gmail.com> (<https://vdustr.github.io>)
