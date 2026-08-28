@@ -5,11 +5,10 @@ import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live";
 import { transformCode } from "../transformCode";
 
 namespace ReactLive {
-  export interface Props
-    extends Omit<
-      ComponentProps<typeof LiveProvider>,
-      "children" | "noInline"
-    > {}
+  export interface Props extends Omit<
+    ComponentProps<typeof LiveProvider>,
+    "children" | "noInline"
+  > {}
   export type Type = React.FC<Props>;
 }
 

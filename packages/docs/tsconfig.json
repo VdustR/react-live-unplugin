@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "."
+    "ignoreDeprecations": "6.0"
   },
   "exclude": [".docusaurus", "build"],
   "extends": ["@repo/tsconfig/script/tsconfig", "@docusaurus/tsconfig"]

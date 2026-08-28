@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "commit": "cz",
-    "lint": "run-p lint:*",
+    "lint": "corepack pnpm run \"/^lint:.*/\"",
     "lint:cspell": "cspell --no-summary --no-progress",
     "lint:es": "eslint . --fix --report-unused-disable-directives --max-warnings 0",
     "lint:prettier": "prettier --ignore-unknown --write .",
@@ -24,7 +24,6 @@
     "@types/react": "catalog:",
     "babel-plugin-react-compiler": "catalog:",
     "fs-extra": "catalog:",
-    "npm-run-all": "catalog:",
     "react": "catalog:",
     "react-live": "catalog:",
     "react-live-unplugin": "workspace:*"
@@ -40,7 +39,7 @@
     "@total-typescript/ts-reset": "catalog:",
     "@tsconfig/node-ts": "catalog:",
     "@tsconfig/strictest": "catalog:",
-    "@types/lint-staged": "catalog:",
+    "@typescript/native": "catalog:",
     "@vp-tw/eslint-config": "catalog:",
     "@vp-tw/tsconfig": "catalog:",
     "commitizen": "catalog:",
@@ -49,6 +48,7 @@
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-package-json": "catalog:",
     "eslint-plugin-react-compiler": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
     "fast-glob": "catalog:",
     "husky": "catalog:",
     "jiti": "catalog:",
@@ -64,9 +64,9 @@
     "tsx": "catalog:",
     "typescript": "catalog:"
   },
-  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
+  "packageManager": "pnpm@11.24.0+sha512.bd27e345e976dcb0be0b7a1228217b049a817e21b1f355c90dbe7dc46671895a8bc1e6d06c24554505ea93ea0b45f489a27ec1bfbc8de6a9659fca0f16fa0000",
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=8"
+    "node": ">=22.13",
+    "pnpm": ">=11"
   }
 }

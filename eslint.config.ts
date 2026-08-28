@@ -22,5 +22,12 @@ export default vdustr(
       "import/no-default-export": "off",
     },
   },
+  {
+    files: ["packages/docs/package.json"],
+    rules: {
+      // Docusaurus webpack requires ambiguous module mode for site packages.
+      "package-json/require-type": "off",
+    },
+  },
   includeIgnoreFile(prettierignorePath),
 );

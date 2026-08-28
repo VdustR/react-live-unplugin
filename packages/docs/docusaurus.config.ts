@@ -38,7 +38,11 @@ const config: Config = {
   ],
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -58,6 +62,7 @@ const config: Config = {
       } satisfies Options,
     ],
   ],
+  themes: ["@docusaurus/theme-live-codeblock"],
 
   themeConfig: {
     colorMode: {
