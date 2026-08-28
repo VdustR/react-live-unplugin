@@ -31,6 +31,7 @@
     "url": "https://vdustr.github.io"
   },
   "type": "module",
+  "sideEffects": false,
   "exports": {
     ".": {
       "require": "./dist/index.cjs",
@@ -54,7 +55,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "test": "corepack pnpm run build && node --test test/*.test.mjs"
   },
   "dependencies": {
     "@babel/parser": "catalog:",
@@ -69,6 +71,9 @@
   },
   "devDependencies": {
     "@docusaurus/theme-live-codeblock": "catalog:",
+    "@docusaurus/tsconfig": "catalog:",
+    "react": "catalog:",
+    "react-live": "catalog:",
     "unbuild": "catalog:"
   },
   "peerDependencies": {

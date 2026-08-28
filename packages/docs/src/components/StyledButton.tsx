@@ -5,7 +5,10 @@ namespace StyledButton {
   export interface Props extends React.ComponentProps<"button"> {}
 }
 
-const StyledButton: React.FC<StyledButton.Props> = ({ type = "button", ...props }) => {
+const StyledButton: React.FC<StyledButton.Props> = ({
+  type = "button",
+  ...props
+}) => {
   return (
     <button
       {...props}

@@ -38,17 +38,17 @@ const config = isFormat
         pkgs.flatMap((pkg) => {
           if (withSrcPkgs.includes(pkg)) {
             return [
-              [`${pkg}/*.config.{js,ts}`, () => `pnpm exec tsc -p ${pkg}`],
+              [`${pkg}/*.config.{js,ts}`, () => `pnpm exec tsc6 -p ${pkg}`],
               [
                 `${pkg}/src/**/*.{${typescriptExtensions.join(",")}}`,
-                () => `pnpm exec tsc -p ${pkg}/src`,
+                () => `pnpm exec tsc6 -p ${pkg}/src`,
               ],
             ];
           }
           return [
             [
               `${pkg}/**/*.{${typescriptExtensions.join(",")}}`,
-              () => `pnpm exec tsc -p ${pkg}`,
+              () => `pnpm exec tsc6 -p ${pkg}`,
             ],
           ];
         }),

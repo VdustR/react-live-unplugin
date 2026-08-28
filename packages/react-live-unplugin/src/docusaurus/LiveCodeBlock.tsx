@@ -1,6 +1,6 @@
 import type { ReactLive } from "../default/ReactLive";
 /// <reference types="@docusaurus/theme-live-codeblock" />
-import Playground from "@docusaurus/theme-live-codeblock/lib/theme/Playground";
+import Playground from "@docusaurus/theme-live-codeblock/lib/theme/Playground/index.js";
 import React, { useMemo } from "react";
 import { transformCode } from "../transformCode";
 

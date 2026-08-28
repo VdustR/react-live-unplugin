@@ -80,23 +80,26 @@ const reactLiveUnpluginFactory: UnpluginFactory<
         const codeVarName = `code_${randomSeed}`;
         const scopeVarName = `scope_${randomSeed}`;
         const componentVarName = `Component_${randomSeed}`;
+        const createElementVarName = `createElement_${randomSeed}`;
 
         const codeCode = `const ${codeVarName} = ${JSON.stringify(code)};`;
         const scopeCode = `const ${scopeVarName} = ${
           imports.length === 0 ? "{}" : `{ ${imports.join(", ")} }`
         };`;
         const exportDemo = `export default function Demo() {
-        return (
-          <${componentVarName} scope={${scopeVarName}} code={${codeVarName}} />
-        );
+        return ${createElementVarName}(${componentVarName}, {
+          scope: ${scopeVarName},
+          code: ${codeVarName},
+        });
       }`;
 
-        const compiled = `import { ${
-          mergedOptions.reactLiveExportName
-        } as ${componentVarName} } from "${mergedOptions.reactLiveModulePath.replace(
-          /"/g,
-          '\\"',
-        )}";
+        const compiled = `import { createElement as ${createElementVarName} } from "react";
+      import { ${
+        mergedOptions.reactLiveExportName
+      } as ${componentVarName} } from "${mergedOptions.reactLiveModulePath.replace(
+        /"/g,
+        '\\"',
+      )}";
       ${importsCode.join("\n")}
       ${codeCode}
       ${scopeCode}
