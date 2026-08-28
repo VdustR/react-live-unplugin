@@ -97,8 +97,8 @@ catalogs:
       specifier: ^5.0.1
       version: 5.0.1
     babel-plugin-react-compiler:
-      specifier: 19.1.0-rc.3
-      version: 19.1.0-rc.3
+      specifier: ^1.0.0
+      version: 1.0.0
     clsx:
       specifier: ^2.1.1
       version: 2.1.1
@@ -142,8 +142,8 @@ catalogs:
       specifier: ^10.0.1
       version: 10.0.1
     lint-staged:
-      specifier: ^17.3.0
-      version: 17.3.0
+      specifier: ^17.4.1
+      version: 17.4.1
     pathe:
       specifier: ^2.0.3
       version: 2.0.3
@@ -194,6 +194,7 @@ catalogs:
       version: 8.2.2
 
 overrides:
+  js-yaml: 4.3.2
   pacote: 21.5.1
 
 importers:
@@ -217,7 +218,7 @@ importers:
         version: 19.2.18
       babel-plugin-react-compiler:
         specifier: 'catalog:'
-        version: 19.1.0-rc.3
+        version: 1.0.0
       fs-extra:
         specifier: 'catalog:'
         version: 11.4.0
@@ -305,7 +306,7 @@ importers:
         version: 10.0.1(@swc/core@1.16.1)(@types/node@26.4.0)(@typescript/typescript6@6.0.2)(supports-color@7.2.0)
       lint-staged:
         specifier: 'catalog:'
-        version: 17.3.0
+        version: 17.4.1
       pathe:
         specifier: 'catalog:'
         version: 2.0.3
@@ -4572,8 +4573,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.4.0 || ^8.0.0-0 <8.0.0
 
-  babel-plugin-react-compiler@19.1.0-rc.3:
-    resolution: {integrity: sha512-mjRn69WuTz4adL0bXGx8Rsyk1086zFJeKmes6aK0xPuK3aaXmDJdLHqwKKMrpm6KAI1MCoUK72d2VeqQbu8YIA==}
+  babel-plugin-react-compiler@1.0.0:
+    resolution: {integrity: sha512-Ixm8tFfoKKIPYdCCKYTsqv+Fd4IJ0DQqMyEimo+pxUOMUR9cVPlwTrFt9Avu+3cb6Zp3mAzl+t1MrG2fxxKsxw==}
 
   bail@2.0.2:
     resolution: {integrity: sha512-0xO6mYd7JB2YesxDKplafRpsiOzPt9V02ddPCLbY1xYGPOX24NTyN50qnUxgCPcSoYMhKpAuBTjQoRZCAkUDRw==}
@@ -6970,10 +6971,6 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@4.3.0:
-    resolution: {integrity: sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==}
-    hasBin: true
-
   js-yaml@4.3.2:
     resolution: {integrity: sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==}
     hasBin: true
@@ -7184,8 +7181,8 @@ packages:
     resolution: {integrity: sha512-cNOjgCnLB+FnvWWtyRTzmB3POJ+cXxTA81LoW7u8JdmhfXzriropYwpjShnz1QLLWsQwY7nIxoDmcPTwphDK9w==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  lint-staged@17.3.0:
-    resolution: {integrity: sha512-woZS3vNe3UKqBaLPvbLOtKRY4tLANpWQhom12MGWqC8Mh1lCOO+WgSwmX2amjJAqTY9BkXYW87fCUH5H9Ph6xw==}
+  lint-staged@17.4.1:
+    resolution: {integrity: sha512-FmJeudcalbSfg1du+JCfvi5vS6Qt08KgbfLWiHinbef+2JJwUZwAWVoaO1AcJVUTWPfk0t30PMQNwPAeCzYQ+Q==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -16750,7 +16747,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  babel-plugin-react-compiler@19.1.0-rc.3:
+  babel-plugin-react-compiler@1.0.0:
     dependencies:
       '@babel/types': 7.29.8
 
@@ -17354,7 +17351,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.3.0
+      js-yaml: 4.3.2
       parse-json: 5.2.0
     optionalDependencies:
       typescript: '@typescript/typescript6@6.0.2'
@@ -19724,10 +19721,6 @@ snapshots:
 
   js-tokens@4.0.0: {}
 
-  js-yaml@4.3.0:
-    dependencies:
-      argparse: 2.0.1
-
   js-yaml@4.3.2:
     dependencies:
       argparse: 2.0.1
@@ -19838,7 +19831,7 @@ snapshots:
       ini: 1.3.8
       init-package-json: 8.2.2
       inquirer: 12.9.6(@types/node@26.4.0)
-      js-yaml: 4.3.0
+      js-yaml: 4.3.2
       libnpmaccess: 10.0.3(supports-color@7.2.0)
       libnpmpublish: 11.1.2(supports-color@7.2.0)
       load-json-file: 6.2.0
@@ -19952,7 +19945,7 @@ snapshots:
 
   lines-and-columns@2.0.3: {}
 
-  lint-staged@17.3.0:
+  lint-staged@17.4.1:
     dependencies:
       picomatch: 4.0.7
       string-argv: 0.3.2

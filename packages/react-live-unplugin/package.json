@@ -55,7 +55,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "prepublishOnly": "pnpm run build"
+    "prepublishOnly": "pnpm run build",
+    "test": "corepack pnpm run build && node --test test/*.test.mjs"
   },
   "dependencies": {
     "@babel/parser": "catalog:",

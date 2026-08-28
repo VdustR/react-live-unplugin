@@ -29,5 +29,14 @@ export default vdustr(
       "package-json/require-type": "off",
     },
   },
+  {
+    files: ["packages/react-live-unplugin/test/package.test.mjs"],
+    rules: {
+      // This smoke test validates the built ESM and CommonJS package exports.
+      "antfu/no-import-dist": "off",
+      // Use the dependency-free Node test runner for the package smoke test.
+      "test/no-import-node-test": "off",
+    },
+  },
   includeIgnoreFile(prettierignorePath),
 );

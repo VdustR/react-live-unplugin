@@ -36,7 +36,7 @@ catalog:
   "@vitejs/plugin-react-swc": ^4.3.3
   "@vp-tw/eslint-config": ^2.0.0
   "@vp-tw/tsconfig": ^5.0.1
-  babel-plugin-react-compiler: 19.1.0-rc.3
+  babel-plugin-react-compiler: ^1.0.0
   clsx: ^2.1.1
   commitizen: ^4.3.2
   cspell: ^10.1.1
@@ -51,7 +51,7 @@ catalog:
   husky: ^9.1.7
   jiti: ^2.7.0
   lerna: ^10.0.1
-  lint-staged: ^17.3.0
+  lint-staged: ^17.4.1
   pathe: ^2.0.3
   postcss-styled-syntax: ^0.7.2
   prettier: ^3.9.6
@@ -68,7 +68,13 @@ catalog:
   unbuild: ^3.6.1
   unplugin: ^3.3.0
   vite: ^8.2.2
+minimumReleaseAgeExclude:
+  # Fresh registry latest release verified during this upgrade.
+  - lint-staged@17.4.1
 overrides:
+  # Lerna 10 pins js-yaml 4.3.0. Keep its supported major while applying the
+  # patched 4.x release for CVE-2026-59870.
+  js-yaml: 4.3.2
   # Lerna 10 pins vulnerable pacote 21.0.1. Keep the supported major while
   # applying the first patched release for GHSA-w4pp-8pjf-rmxw.
   pacote: 21.5.1
