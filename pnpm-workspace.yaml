@@ -78,6 +78,15 @@ overrides:
   # Lerna 10 pins vulnerable pacote 21.0.1. Keep the supported major while
   # applying the first patched release for GHSA-w4pp-8pjf-rmxw.
   pacote: 21.5.1
+  # Docusaurus' webpack-dev-server path accepts qs 6.x. Pin the first patched
+  # release for CVE-2026-82562.
+  qs: 6.16.0
+  # Docusaurus' webpack plugins pin serialize-javascript 6.x. Version 7.0.5 is
+  # the first release that fixes both known code-injection and DoS advisories.
+  serialize-javascript: 7.0.5
+  # SockJS pins uuid 8.x, whose API use is limited to v4(). Use the patched
+  # legacy release for CVE-2026-41907.
+  uuid: 11.1.1
 packages:
   - packages/*
 shellEmulator: true
