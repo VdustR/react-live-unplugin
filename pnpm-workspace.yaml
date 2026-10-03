@@ -72,6 +72,14 @@ minimumReleaseAgeExclude:
   # Fresh registry latest release verified during this upgrade.
   - lint-staged@17.4.1
 overrides:
+  # cspell:ignore axios
+  # Lerna pins axios; harden inherited request options within its supported major.
+  axios: 1.20.0
+  # Preserve the legacy and modern brace-expansion APIs while bounding rewrites.
+  brace-expansion@1: 1.1.21
+  brace-expansion@5: 5.0.12
+  # Correct cross-family subnet and IPv6 special-range classification in socks.
+  ip-address: 10.7.1
   # Lerna 10 pins js-yaml 4.3.0. Keep its supported major while applying the
   # patched 4.x release for CVE-2026-59870.
   js-yaml: 4.3.2
