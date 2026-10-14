@@ -72,6 +72,9 @@ minimumReleaseAgeExclude:
   # Fresh registry latest release verified during this upgrade.
   - lint-staged@17.4.1
 overrides:
+  # cspell:ignore devkit smol
+  # Keep Lerna's Nx runtime and devkit on the patched 23.x release.
+  "@nx/devkit": 23.2.1
   # cspell:ignore axios
   # Lerna pins axios; harden inherited request options within its supported major.
   axios: 1.20.0
@@ -83,6 +86,7 @@ overrides:
   # Lerna 10 pins js-yaml 4.3.0. Keep its supported major while applying the
   # patched 4.x release for CVE-2026-59870.
   js-yaml: 4.3.2
+  nx: 23.2.1
   # Lerna 10 pins vulnerable pacote 21.0.1. Keep the supported major while
   # applying the first patched release for GHSA-w4pp-8pjf-rmxw.
   pacote: 21.5.1
@@ -92,6 +96,10 @@ overrides:
   # Docusaurus' webpack plugins pin serialize-javascript 6.x. Version 7.0.5 is
   # the first release that fixes both known code-injection and DoS advisories.
   serialize-javascript: 7.0.5
+  # Reject line terminators after comment tokens before shell command quoting.
+  shell-quote: 1.11.0
+  # Preserve newer TOML parsers while fixing Nx's pinned malformed-input loop.
+  smol-toml@<1.7.1: 1.7.1
   # SockJS pins uuid 8.x, whose API use is limited to v4(). Use the patched
   # legacy release for CVE-2026-41907.
   uuid: 11.1.1
