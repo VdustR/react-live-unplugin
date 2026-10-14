@@ -72,6 +72,8 @@ minimumReleaseAgeExclude:
   # Fresh registry latest release verified during this upgrade.
   - lint-staged@17.4.1
 overrides:
+  # Docusaurus uses the unchanged pool API on this repository's Node >=22.
+  "@docusaurus/core>tinypool": 2.1.2
   # cspell:ignore devkit smol
   # Keep Lerna's Nx runtime and devkit on the patched 23.x release.
   "@nx/devkit": 23.2.1
@@ -81,15 +83,24 @@ overrides:
   # Preserve the legacy and modern brace-expansion APIs while bounding rewrites.
   brace-expansion@1: 1.1.21
   brace-expansion@5: 5.0.12
+  # cspell:ignore katex
+  # Patch inherited build and development dependencies for alerts 247-257.
+  compression: 1.8.2
+  handlebars: 4.7.10
   # Correct cross-family subnet and IPv6 special-range classification in socks.
   ip-address: 10.7.1
   # Lerna 10 pins js-yaml 4.3.0. Keep its supported major while applying the
   # patched 4.x release for CVE-2026-59870.
   js-yaml: 4.3.2
+  # micromark uses renderToString only; no internal KaTeX CSS selectors.
+  micromark-extension-math>katex: 0.18.2
   nx: 23.2.1
   # Lerna 10 pins vulnerable pacote 21.0.1. Keep the supported major while
   # applying the first patched release for GHSA-w4pp-8pjf-rmxw.
   pacote: 21.5.1
+  # Preserve selector AST APIs; verify legacy CSS consumers against 7.x.
+  postcss-selector-parser: 7.1.6
+  proxy-addr: 2.0.8
   # Docusaurus' webpack-dev-server path accepts qs 6.x. Pin the first patched
   # release for CVE-2026-82562.
   qs: 6.16.0
@@ -98,8 +109,9 @@ overrides:
   serialize-javascript: 7.0.5
   # Reject line terminators after comment tokens before shell command quoting.
   shell-quote: 1.11.0
-  # Preserve newer TOML parsers while fixing Nx's pinned malformed-input loop.
-  smol-toml@<1.7.1: 1.7.1
+  # Bound key scanning as well as the earlier malformed-input loop.
+  smol-toml@<1.9.0: 1.9.0
+  source-map-js: 1.2.2
   # SockJS pins uuid 8.x, whose API use is limited to v4(). Use the patched
   # legacy release for CVE-2026-41907.
   uuid: 11.1.1
